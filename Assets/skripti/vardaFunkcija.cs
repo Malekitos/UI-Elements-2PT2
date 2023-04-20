@@ -10,6 +10,7 @@ public class vardaFunkcija : MonoBehaviour {
 	public GameObject tekstaAttelosana;
 	private string[] fragmenti = {"Sveiks","Jauku dienu","Negribu tevi redzet!","Katisj ot sjuda"};
 	int indekss;
+
 	public void UzglabaTekstu() {
 		indekss = Random.Range(0,fragmenti.Length);
 		teksts = ievadesLauks.GetComponent<InputField>().text;
