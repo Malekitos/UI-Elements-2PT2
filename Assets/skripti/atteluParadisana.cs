@@ -11,6 +11,9 @@ public class atteluParadisana : MonoBehaviour {
     public GameObject tanteImg;
     public GameObject kreisais;
     public GameObject labais;
+    public GameObject mainigaAttels;
+    public Sprite[] atteluMasivs;
+
 
     public void binaAttelosana(bool vertiba)
     {
@@ -41,4 +44,19 @@ public class atteluParadisana : MonoBehaviour {
         beensImg.transform.localScale = new Vector2(1, 1);
     }
 
+
+    public void izkritosais(int skaitlis)
+    {
+        switch (skaitlis) {
+         case 0:
+                mainigaAttels.GetComponent<Image>().sprite = atteluMasivs[0];break;
+        
+         case 1:
+                mainigaAttels.GetComponent<Image>().sprite = atteluMasivs[1]; break;
+    
+         case 2:
+                mainigaAttels.GetComponent<Image>().sprite = atteluMasivs[2];break;
+        }
+
+}
 }
