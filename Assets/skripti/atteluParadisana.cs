@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class atteluParadisana : MonoBehaviour {
 
@@ -8,10 +9,14 @@ public class atteluParadisana : MonoBehaviour {
     public GameObject lacisImg;
     public GameObject masinaImg;
     public GameObject tanteImg;
+    public GameObject kreisais;
+    public GameObject labais;
 
     public void binaAttelosana(bool vertiba)
     {
         beensImg.SetActive(vertiba);
+        kreisais.GetComponent<Toggle>().interactable = vertiba;
+        labais.GetComponent<Toggle>().interactable = vertiba;
     }
     public void lasisAttelosana(bool vertiba)
     {
@@ -24,6 +29,16 @@ public class atteluParadisana : MonoBehaviour {
     public void tanteAttelosana(bool vertiba)
     {
         tanteImg.SetActive(vertiba);
+    }
+
+    public void paLabi(bool vertiba)
+    {
+        beensImg.transform.localScale = new Vector2(-1, 1);
+    }
+
+    public void paKreisi(bool vertiba)
+    {
+        beensImg.transform.localScale = new Vector2(1, 1);
     }
 
 }
